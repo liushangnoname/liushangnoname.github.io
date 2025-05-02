@@ -1,0 +1,38 @@
+# jemdoc: menu{MENU}{index.html}, nofooter  
+=Shang Liu
+
+~~~
+{}{img_left}{bio.jpg}{alt text}{300}{200}
+Ph.D. candidate at [https://www.imperial.ac.uk/business-school/ Imperial College Business School] \n
+Imperial College London,\n
+South Kensington Campus, London, SW7 2AZ, United Kingdom \n
+Email: s.liu21@imperial.ac.uk
+~~~
+
+== About me
+I am now a Ph.D. candidate at Imperial College Business School under the advice of [https://xiaocheng-li.github.io/ Prof. Xiaocheng Li].\n
+I received my M.Res. degree from Imperial College Business School in 2022.
+Before joining Imperial College, I received my B.Sc. degree from [https://www.math.pku.edu.cn/ School of Mathematical Sciences] at Peking University in 2021.\n
+Here is my [CV.pdf CV].\n
+For those who are interested, my Chinese name is 刘(Liu)上(Shang).
+== Research
+My current research interests include:
+- Deep Learning Theory
+- Statistical Learning Theory
+- Optimization for Machine Learning
+
+== Publications
+/reverse chronological order/\n
+. When No-Rejection Learning is Consistent for Regression with Rejection \n
+/by/ Xiaocheng Li, *Shang Liu*, Chunlin Sun, Hanzhao Wang, accepted at /AISTATS 2024/, \[[https://arxiv.org/abs/2307.02932/ arXiv]\].
+. Understanding Uncertainty Sampling \n
+/by/ *Shang Liu* and Xiaocheng Li, submitted, \[[https://arxiv.org/abs/2307.02719 arXiv]\].
+. Distribution-Free Model-Agnostic Regression Calibration via Nonparametric Methods \n
+/by/ *Shang Liu\**, Zhongze Cai\*, and Xiaocheng Li, accepted at /NeurIPS 2023/, \[[https://arxiv.org/abs/2305.12283/ arXiv]\].
+. Maximum Optimality Margin: A Unified Approach for Contextual Linear Programming and Inverse Linear Programming \n
+/by/ Chunlin Sun\*, *Shang Liu\**, and Xiaocheng Li, accepted at /ICML 2023/, \[[https://arxiv.org/abs/2301.11260/ arXiv]\].
+. Non-stationary Bandits with Knapsacks \n
+/by/ *Shang Liu*, Jiashuo Jiang, and Xiaocheng Li, accepted at /NeurIPS 2022/, \[[https://arxiv.org/abs/2205.12427/ arXiv]\].
+. Online Bin Packing with Known /T/ \n
+/by/ *Shang Liu* and Xiaocheng Li, under major revision at /Mathematics of Operations Research/, \[[https://arxiv.org/abs/2112.03200 arXiv]\].
+
