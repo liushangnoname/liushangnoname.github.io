@@ -1,38 +1,50 @@
-# jemdoc: menu{MENU}{index.html}, nofooter  
+# jemdoc: menu{MENU}{index.html}, nofooter
 =Shang Liu
 
 ~~~
 {}{img_left}{bio.jpg}{alt text}{300}{200}
-Ph.D. candidate at [https://www.imperial.ac.uk/business-school/ Imperial College Business School] \n
+Ph.D. candidate at [https://www.imperial.ac.uk/business-school/ Imperial Business School] \n
 Imperial College London,\n
 South Kensington Campus, London, SW7 2AZ, United Kingdom \n
 Email: s.liu21@imperial.ac.uk
 ~~~
 
 == About me
-I am now a Ph.D. candidate at Imperial College Business School under the advice of [https://xiaocheng-li.github.io/ Prof. Xiaocheng Li].\n
+I am a Ph.D. candidate at [https://www.imperial.ac.uk/business-school/ Imperial Business School] under the advice of [https://xiaocheng-li.github.io/ Prof. Xiaocheng Li] and [https://profiles.imperial.ac.uk/kalyan.talluri/ Prof. Kalyan Talluri].\n
+I am now visiting the [https://msande.stanford.edu/ Department of Management Science and Engineering] at Stanford University, hosted by [https://web.stanford.edu/~jblanche/ Prof. Jose Blanchet].\n
 I received my M.Res. degree from Imperial College Business School in 2022.
 Before joining Imperial College, I received my B.Sc. degree from [https://www.math.pku.edu.cn/ School of Mathematical Sciences] at Peking University in 2021.\n
 Here is my [CV.pdf CV].\n
-For those who are interested, my Chinese name is 刘(Liu)上(Shang).
+For those who are interested, my Chinese name is 刘(Liu)上(Shang).\n
+*I am on the job market of 2026 now!*
+
 == Research
 My current research interests include:
-- Deep Learning Theory
-- Statistical Learning Theory
-- Optimization for Machine Learning
+- Machine Learning, Large Language Models, and Operations Research
 
 == Publications
 /reverse chronological order/\n
+. Wasserstein Distributionally Robust Regret Optimization for Reinforcement Learning from Human Feedback \n
+/by/ Yikai Wang\*, *Shang Liu\**, Jose Blanchet, \[[https://arxiv.org/abs/2605.00155/ arXiv]\].
+. Incentivizing High-Quality Human Annotations with Golden Questions \n
+/by/ *Shang Liu*, Zhongze Cai, Hanzhao Wang, Zhongyao Ma, Xiaocheng Li, \[[http://arxiv.org/abs/2505.19134/ arXiv]\].
+. How Humans Help LLMs: Assessing and Incentivizing Human Preference Annotators \n
+/by/ *Shang Liu\**, Hanzhao Wang\*, Zhongyao Ma, Xiaocheng Li, under minor revision at /Management Science/, \[[http://arxiv.org/abs/2502.06387/ arXiv]\].
+. Reward Modeling with Ordinal Feedback: Wisdom of the Crowd \n
+/by/ *Shang Liu\**, Yu Pan\*, Guanting Chen, Xiaocheng Li, /ICML 2025/, \[[https://arxiv.org/abs/2411.12843/ arXiv]\].
+. Towards Better Understanding of In-Context Learning Ability from In-Context Uncertainty Quantification \n
+/by/ *Shang Liu\**, Zhongze Cai\*, Guanting Chen, Xiaocheng Li, /TMLR/, \[[https://arxiv.org/abs/2405.15115/ arXiv]\].
+. Towards Better Statistical Understanding of Watermarking LLMs \n
+/by/ Zhongze Cai\*, *Shang Liu\**, Hanzhao Wang\*, Huaiyang Zhong, Xiaocheng Li, accepted at /Journal of the American Statistical Association/, \[[https://arxiv.org/abs/2403.13027/ arXiv]\].
 . When No-Rejection Learning is Consistent for Regression with Rejection \n
-/by/ Xiaocheng Li, *Shang Liu*, Chunlin Sun, Hanzhao Wang, accepted at /AISTATS 2024/, \[[https://arxiv.org/abs/2307.02932/ arXiv]\].
+/by/ Xiaocheng Li, *Shang Liu*, Chunlin Sun, Hanzhao Wang, /AISTATS 2024/, \[[https://arxiv.org/abs/2307.02932/ arXiv]\].
 . Understanding Uncertainty Sampling \n
-/by/ *Shang Liu* and Xiaocheng Li, submitted, \[[https://arxiv.org/abs/2307.02719 arXiv]\].
+/by/ *Shang Liu*, Xiaocheng Li, submitted, reject and resubmission at /JMLR/, \[[https://arxiv.org/abs/2307.02719 arXiv]\].
 . Distribution-Free Model-Agnostic Regression Calibration via Nonparametric Methods \n
-/by/ *Shang Liu\**, Zhongze Cai\*, and Xiaocheng Li, accepted at /NeurIPS 2023/, \[[https://arxiv.org/abs/2305.12283/ arXiv]\].
+/by/ *Shang Liu\**, Zhongze Cai\*, Xiaocheng Li, /NeurIPS 2023/, \[[https://arxiv.org/abs/2305.12283/ arXiv]\].
 . Maximum Optimality Margin: A Unified Approach for Contextual Linear Programming and Inverse Linear Programming \n
-/by/ Chunlin Sun\*, *Shang Liu\**, and Xiaocheng Li, accepted at /ICML 2023/, \[[https://arxiv.org/abs/2301.11260/ arXiv]\].
+/by/ Chunlin Sun\*, *Shang Liu\**, Xiaocheng Li, /ICML 2023/, \[[https://arxiv.org/abs/2301.11260/ arXiv]\].
 . Non-stationary Bandits with Knapsacks \n
-/by/ *Shang Liu*, Jiashuo Jiang, and Xiaocheng Li, accepted at /NeurIPS 2022/, \[[https://arxiv.org/abs/2205.12427/ arXiv]\].
+/by/ *Shang Liu*, Jiashuo Jiang, Xiaocheng Li, /NeurIPS 2022/, \[[https://arxiv.org/abs/2205.12427/ arXiv]\].
 . Online Bin Packing with Known /T/ \n
-/by/ *Shang Liu* and Xiaocheng Li, under major revision at /Mathematics of Operations Research/, \[[https://arxiv.org/abs/2112.03200 arXiv]\].
-
+/by/ *Shang Liu*, Xiaocheng Li, under major revision at /Mathematics of Operations Research/, \[[https://arxiv.org/abs/2112.03200 arXiv]\].

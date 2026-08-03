@@ -32,6 +32,37 @@ from subprocess import *
 from types import *
 import tempfile
 
+UTF8_BOM = b'\xef\xbb\xbf'
+
+def open_utf8_input(name):
+  f = io.open(name, 'rb')
+  if f.read(3) != UTF8_BOM:
+    f.seek(0)
+  return f
+
+def read_utf8_line(f):
+  l = f.readline()
+  if isinstance(l, bytes):
+    return l.decode('utf-8')
+  return l
+
+def read_utf8(f):
+  s = f.read()
+  if isinstance(s, bytes):
+    return s.decode('utf-8')
+  return s
+
+def read_latin1_char(f):
+  c = f.read(1)
+  if isinstance(c, bytes):
+    return c.decode('latin-1')
+  return c
+
+def decode_process_line(l):
+  if isinstance(l, bytes):
+    return l.decode('utf-8', 'replace')
+  return l
+
 def info():
   print(__doc__)
   print('Platform: ' + sys.platform + '.')
@@ -53,14 +84,14 @@ def testeqsupport():
     msg += '  latex: not found.\n'
     supported = False
   else:
-    msg += '  latex: ' + p.stdout.readlines()[0].rstrip() + '.\n'
+    msg += '  latex: ' + decode_process_line(p.stdout.readlines()[0]).rstrip() + '.\n'
   p = Popen('dvipng --version', shell=True, stdout=PIPE, stderr=PIPE)
   rc = p.wait()
   if rc != 0:
     msg += '  dvipng: not found.\n'
     supported = False
   else:
-    msg += '  dvipng: ' + p.stdout.readlines()[0].rstrip() + '.\n'
+    msg += '  dvipng: ' + decode_process_line(p.stdout.readlines()[0]).rstrip() + '.\n'
 
   return (supported, msg[:-1])
 
@@ -87,7 +118,7 @@ class controlstruct(object):
 
   def pushfile(self, newfile):
     self.otherfiles.insert(0, self.inf)
-    self.inf = io.open(newfile, 'rb', encoding='utf-8')
+    self.inf = open_utf8_input(newfile)
 
   def nextfile(self):
     self.inf.close()
@@ -137,6 +168,7 @@ def standardconf():
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
   <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head>
+    <link rel="shortcut icon" href="favicon.png" type="/favicon.png" />
   <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   
@@ -285,7 +317,7 @@ def raisejandal(msg, line=0):
   raise JandalError(s)
 
 def readnoncomment(f):
-  l = f.readline().decode('utf-8')
+  l = read_utf8_line(f)
   if l == '':
     return l
   elif l[0] == '#': # jem: be a little more generous with the comments we accept?
@@ -299,7 +331,7 @@ def parseconf(cns):
   # manually add the defaults as a file handle.
   fs = [io.BytesIO(standardconf().encode('utf-8'))]
   for sname in cns:
-    fs.append(io.open(sname, 'rb', encoding='utf-8'))
+    fs.append(open_utf8_input(sname))
 
   for f in fs:
     while pc(controlstruct(f)) != '':
@@ -322,7 +354,7 @@ def parseconf(cns):
   return syntax
 
 def insertmenuitems(f, mname, current, prefix):
-  m = io.open(mname, 'rb')
+  m = open_utf8_input(mname)
   while pc(controlstruct(m)) != '':
     l = readnoncomment(m)
     l = l.strip()
@@ -444,7 +476,7 @@ def hb(f, tag, content1, content2=None, content3=None):
 def pc(f, ditchcomments=True):
   """Peeks at next character in the file."""
   # Should only be used to look at the first character of a new line.
-  c = f.inf.read(1).decode('cp1252')
+  c = read_latin1_char(f.inf)
   if c: # only undo forward movement if we're not at the end.
     if ditchcomments and c == '#':
       l = nl(f)
@@ -469,8 +501,8 @@ def doincludes(f, l):
   i = 'include{'
   l = l.rstrip()
   if l.startswith(ir):
-    nf = io.open(l[len(ir):-1], 'rb', encoding='utf-8')
-    f.outf.write(nf.read().decode('utf-8'))
+    nf = open_utf8_input(l[len(ir):-1])
+    f.outf.write(read_utf8(nf))
     nf.close()
   elif l.startswith(i):
     f.pushfile(l[len(i):-1])
@@ -481,7 +513,7 @@ def doincludes(f, l):
 
 def nl(f, withcount=False, codemode=False):
   """Get input file line."""
-  s = f.inf.readline().decode('utf-8')
+  s = read_utf8_line(f.inf)
   if not s and f.otherfiles:
     f.nextfile()
     return nl(f, withcount, codemode)
@@ -1009,7 +1041,7 @@ def geneq(f, eq, dpi, wl, outname):
   eqdepths = {}
   if f.eqcache:
     try:
-      dc = io.open(os.path.join(f.eqdir, '.eqdepthcache'), 'rb', encoding='utf-8')
+      dc = io.open(os.path.join(f.eqdir, '.eqdepthcache'), 'r', encoding='utf-8')
       for l in dc:
         a = l.split()
         eqdepths[a[0]] = int(a[1])
@@ -1024,7 +1056,7 @@ def geneq(f, eq, dpi, wl, outname):
   tempdir = tempfile.gettempdir()
   fd, texfile = tempfile.mkstemp('.tex', '', tempdir, True)
   basefile = texfile[:-4]
-  g = os.fdopen(fd, 'wb', encoding='utf-8')
+  g = os.fdopen(fd, 'w', encoding='utf-8')
 
   preamble = '\documentclass{article}\n'
   for p in f.eqpackages:
@@ -1055,7 +1087,7 @@ def geneq(f, eq, dpi, wl, outname):
     rc = p.wait()
     if rc != 0:
       for l in p.stdout.readlines():
-        print('  ' + l.rstrip())
+        print('  ' + decode_process_line(l).rstrip())
       exts.remove('.tex')
       raise Exception('latex error')
 
@@ -1067,7 +1099,8 @@ def geneq(f, eq, dpi, wl, outname):
     if rc != 0:
       print(p.stderr.readlines())
       raise Exception('dvipng error')
-    depth = int(p.stdout.readlines()[-1].split('=')[-1])
+    depthline = decode_process_line(p.stdout.readlines()[-1])
+    depth = int(depthline.split('=')[-1])
   finally:
     # Clean up.
     for ext in exts:
@@ -1078,7 +1111,7 @@ def geneq(f, eq, dpi, wl, outname):
   # Update the cache if we're using it.
   if f.eqcache and eqname not in eqdepths:
     try:
-      dc = io.open(os.path.join(f.eqdir, '.eqdepthcache'), 'ab', encoding='utf-8')
+      dc = io.open(os.path.join(f.eqdir, '.eqdepthcache'), 'a', encoding='utf-8')
       dc.write(eqname + ' ' + str(depth) + '\n')
       dc.close()
     except IOError:
@@ -1262,7 +1295,7 @@ def procfile(f):
   js = []
   title = None
   while pc(f, False) == '#':
-    l = f.inf.readline().decode('utf-8')
+    l = read_utf8_line(f.inf)
     f.linenum += 1
     if doincludes(f, l[1:]):
       continue
@@ -1627,7 +1660,7 @@ def main():
     else:
       thisout = outname
 
-    infile = io.open(inname, 'rb')
+    infile = open_utf8_input(inname)
     outfile = io.open(thisout, 'w', encoding='utf-8')
 
 #    print(infile.read())
