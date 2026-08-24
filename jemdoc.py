@@ -171,6 +171,7 @@ def standardconf():
     <link rel="shortcut icon" href="favicon.png" type="/favicon.png" />
   <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   [defaultcss]
   <link rel="stylesheet" href="jemdoc.css" type="text/css" />

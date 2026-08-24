@@ -1,4 +1,4 @@
-# jemdoc: menu{MENU}{index.html}, nofooter
+# jemdoc: menu{MENU}{index.html}, nofooter, addjs{publications}
 =Shang Liu
 
 ~~~
@@ -11,7 +11,7 @@ Email: s.liu21@imperial.ac.uk
 
 == About me
 I am a Ph.D. candidate at [https://www.imperial.ac.uk/business-school/ Imperial Business School] under the advice of [https://xiaocheng-li.github.io/ Prof. Xiaocheng Li] and [https://profiles.imperial.ac.uk/kalyan.talluri/ Prof. Kalyan Talluri].\n
-I am now visiting the [https://msande.stanford.edu/ Department of Management Science and Engineering] at Stanford University, hosted by [https://web.stanford.edu/~jblanche/ Prof. Jose Blanchet].\n
+Previously, I visited the [https://msande.stanford.edu/ Department of Management Science and Engineering] at Stanford University, hosted by [https://web.stanford.edu/~jblanche/ Prof. Jose Blanchet].\n
 I received my M.Res. degree from Imperial College Business School in 2022.
 Before joining Imperial College, I received my B.Sc. degree from [https://www.math.pku.edu.cn/ School of Mathematical Sciences] at Peking University in 2021.\n
 Here is my [CV.pdf CV].\n
@@ -23,28 +23,62 @@ My current research interests include:
 - Machine Learning, Large Language Models, and Operations Research
 
 == Publications
-/reverse chronological order/\n
+~~~
+{}{raw}
+<div class="publication-switcher" role="group" aria-label="Publication ordering">
+  <button type="button" class="publication-toggle active" data-publication-view="topic" aria-controls="publications-topic" aria-pressed="true">By Topic</button>
+  <button type="button" class="publication-toggle" data-publication-view="time" aria-controls="publications-time" aria-pressed="false" disabled="disabled">By Time</button>
+</div>
+<div id="publications-topic" class="publication-view">
+~~~
+
+=== LLM Alignment and Trustworthiness
 . Wasserstein Distributionally Robust Regret Optimization for Reinforcement Learning from Human Feedback \n
-/by/ Yikai Wang\*, *Shang Liu\**, Jose Blanchet, \[[https://arxiv.org/abs/2605.00155/ arXiv]\].
+/by/ Yikai Wang\*, *Shang Liu\**, Jose Blanchet, \[[https://arxiv.org/abs/2605.00155/ arXiv]\]. \n
+/TL;DR:/ When RLHF only observes a proxy reward, minimizing worst-case regret mitigates reward over-optimization without becoming either over-optimistic or over-pessimistic.
 . Incentivizing High-Quality Human Annotations with Golden Questions \n
-/by/ *Shang Liu*, Zhongze Cai, Hanzhao Wang, Zhongyao Ma, Xiaocheng Li, \[[http://arxiv.org/abs/2505.19134/ arXiv]\].
+/by/ *Shang Liu*, Zhongze Cai, Hanzhao Wang, Zhongyao Ma, Xiaocheng Li, \[[http://arxiv.org/abs/2505.19134/ arXiv]\]. \n
+/TL;DR:/ Golden questions can assess annotation quality and incentivize human annotators to exert greater effort.
 . How Humans Help LLMs: Assessing and Incentivizing Human Preference Annotators \n
-/by/ *Shang Liu\**, Hanzhao Wang\*, Zhongyao Ma, Xiaocheng Li, under minor revision at /Management Science/, \[[http://arxiv.org/abs/2502.06387/ arXiv]\].
+/by/ *Shang Liu\**, Hanzhao Wang\*, Zhongyao Ma, Xiaocheng Li, under minor revision at /Management Science/, \[[http://arxiv.org/abs/2502.06387/ arXiv]\]. \n
+/TL;DR:/ Fisher information governs the effectiveness of annotator assessment and incentives, while self-consistency monitoring can be cheaper and more informative than expert-based monitoring.
 . Reward Modeling with Ordinal Feedback: Wisdom of the Crowd \n
-/by/ *Shang Liu\**, Yu Pan\*, Guanting Chen, Xiaocheng Li, /ICML 2025/, \[[https://arxiv.org/abs/2411.12843/ arXiv]\].
-. Towards Better Understanding of In-Context Learning Ability from In-Context Uncertainty Quantification \n
-/by/ *Shang Liu\**, Zhongze Cai\*, Guanting Chen, Xiaocheng Li, /TMLR/, \[[https://arxiv.org/abs/2405.15115/ arXiv]\].
+/by/ *Shang Liu\**, Yu Pan\*, Guanting Chen, Xiaocheng Li, /ICML 2025/, \[[https://arxiv.org/abs/2411.12843/ arXiv]\]. \n
+/TL;DR:/ Finer-grained ordinal feedback can make reward learning statistically easier, for example by reducing its Rademacher complexity.
 . Towards Better Statistical Understanding of Watermarking LLMs \n
-/by/ Zhongze Cai\*, *Shang Liu\**, Hanzhao Wang\*, Huaiyang Zhong, Xiaocheng Li, accepted at /Journal of the American Statistical Association/, \[[https://arxiv.org/abs/2403.13027/ arXiv]\].
+/by/ Zhongze Cai\*, *Shang Liu\**, Hanzhao Wang\*, Huaiyang Zhong, Xiaocheng Li, accepted at /Journal of the American Statistical Association/, \[[https://arxiv.org/abs/2403.13027/ arXiv]\]. \n
+/TL;DR:/ Model distortion is an unavoidable price of watermarking, and the optimal design lies on the Pareto frontier between distortion and detectability.
+
+=== Uncertainty in Machine Learning
+. Towards Better Understanding of In-Context Learning Ability from In-Context Uncertainty Quantification \n
+/by/ *Shang Liu\**, Zhongze Cai\*, Guanting Chen, Xiaocheng Li, /TMLR/, \[[https://arxiv.org/abs/2405.15115/ arXiv]\]. \n
+/TL;DR:/ Transformers can learn to perform in-context uncertainty quantification, revealing how their mean and uncertainty predictions behave under distribution shifts.
 . When No-Rejection Learning is Consistent for Regression with Rejection \n
-/by/ Xiaocheng Li, *Shang Liu*, Chunlin Sun, Hanzhao Wang, /AISTATS 2024/, \[[https://arxiv.org/abs/2307.02932/ arXiv]\].
-. Understanding Uncertainty Sampling \n
-/by/ *Shang Liu*, Xiaocheng Li, \[[https://arxiv.org/abs/2307.02719 arXiv]\].
+/by/ Xiaocheng Li, *Shang Liu*, Chunlin Sun, Hanzhao Wang, /AISTATS 2024/, \[[https://arxiv.org/abs/2307.02932/ arXiv]\]. \n
+/TL;DR:/ Regression with rejection depends on both prediction risk and calibration risk.
+. Understanding Uncertainty Sampling via Equivalent Loss \n
+/by/ *Shang Liu*, Xiaocheng Li, \[[https://arxiv.org/abs/2307.02719 arXiv]\]. \n
+/TL;DR:/ Uncertainty sampling implicitly optimizes an equivalent loss rather than the original loss, potentially changing convexity, Lipschitzness, and surrogate properties.
 . Distribution-Free Model-Agnostic Regression Calibration via Nonparametric Methods \n
-/by/ *Shang Liu\**, Zhongze Cai\*, Xiaocheng Li, /NeurIPS 2023/, \[[https://arxiv.org/abs/2305.12283/ arXiv]\].
+/by/ *Shang Liu\**, Zhongze Cai\*, Xiaocheng Li, /NeurIPS 2023/, \[[https://arxiv.org/abs/2305.12283/ arXiv]\]. \n
+/TL;DR:/ The smoothness of the conditional quantile function, captured by its Lipschitz constant, reveals the intrinsic difficulty of individual regression calibration.
+
+=== Linear Programming and Data-Driven Decision-Making
 . Maximum Optimality Margin: A Unified Approach for Contextual Linear Programming and Inverse Linear Programming \n
-/by/ Chunlin Sun\*, *Shang Liu\**, Xiaocheng Li, /ICML 2023/, \[[https://arxiv.org/abs/2301.11260/ arXiv]\].
+/by/ Chunlin Sun\*, *Shang Liu\**, Xiaocheng Li, /ICML 2023/, \[[https://arxiv.org/abs/2301.11260/ arXiv]\]. \n
+/TL;DR:/ For inverse LPs, the reduced-cost optimality conditions of observed solutions can be turned into an SVM-like maximum-margin learning problem.
 . Non-stationary Bandits with Knapsacks \n
-/by/ *Shang Liu*, Jiashuo Jiang, Xiaocheng Li, /NeurIPS 2022/, \[[https://arxiv.org/abs/2205.12427/ arXiv]\].
+/by/ *Shang Liu*, Jiashuo Jiang, Xiaocheng Li, /NeurIPS 2022/, \[[https://arxiv.org/abs/2205.12427/ arXiv]\]. \n
+/TL;DR:/ Global resource constraints require global, rather than only local, measures of non-stationarity.
 . Online Bin Packing with Known /T/ \n
-/by/ *Shang Liu*, Xiaocheng Li, under major revision at /Mathematics of Operations Research/, \[[https://arxiv.org/abs/2112.03200 arXiv]\].
+/by/ *Shang Liu*, Xiaocheng Li, under major revision at /Mathematics of Operations Research/, \[[https://arxiv.org/abs/2112.03200 arXiv]\]. \n
+/TL;DR:/ In a doubling-trick algorithm, the number of overflowed items can be represented by the maximum of a zero-endpoint random walk.
+
+~~~
+{}{raw}
+</div>
+<div id="publications-time" class="publication-view" hidden="hidden">
+  <p class="publication-order-note"><i>reverse chronological order</i></p>
+  <ol id="publications-chronological-list"></ol>
+</div>
+~~~

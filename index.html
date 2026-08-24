@@ -5,7 +5,9 @@
   <link rel="shortcut icon" href="favicon.png" type="/favicon.png" />
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<script src="publications.js" type="text/javascript"></script>
 <title>Shang Liu</title>
 </head>
 <body>
@@ -29,7 +31,7 @@ Email: s.liu21@imperial.ac.uk
 </td></tr></table>
 <h2>About me</h2>
 <p>I am a Ph.D. candidate at <a href="https://www.imperial.ac.uk/business-school/" target=&ldquo;blank&rdquo;>Imperial Business School</a> under the advice of <a href="https://xiaocheng-li.github.io/" target=&ldquo;blank&rdquo;>Prof. Xiaocheng Li</a> and <a href="https://profiles.imperial.ac.uk/kalyan.talluri/" target=&ldquo;blank&rdquo;>Prof. Kalyan Talluri</a>.<br />
-I am now visiting the <a href="https://msande.stanford.edu/" target=&ldquo;blank&rdquo;>Department of Management Science and Engineering</a> at Stanford University, hosted by <a href="https://web.stanford.edu/~jblanche/" target=&ldquo;blank&rdquo;>Prof. Jose Blanchet</a>.<br />
+Previously, I visited the <a href="https://msande.stanford.edu/" target=&ldquo;blank&rdquo;>Department of Management Science and Engineering</a> at Stanford University, hosted by <a href="https://web.stanford.edu/~jblanche/" target=&ldquo;blank&rdquo;>Prof. Jose Blanchet</a>.<br />
 I received my M.Res. degree from Imperial College Business School in 2022.
 Before joining Imperial College, I received my B.Sc. degree from <a href="https://www.math.pku.edu.cn/" target=&ldquo;blank&rdquo;>School of Mathematical Sciences</a> at Peking University in 2021.<br />
 Here is my <a href="CV.pdf" target=&ldquo;blank&rdquo;>CV</a>.<br />
@@ -45,58 +47,85 @@ For those who are interested, my Chinese name is 刘(Liu)上(Shang).<br />
 </li>
 </ul>
 <h2>Publications</h2>
-<p><i>reverse chronological order</i><br />
-</p>
+<div class="publication-switcher" role="group" aria-label="Publication ordering">
+  <button type="button" class="publication-toggle active" data-publication-view="topic" aria-controls="publications-topic" aria-pressed="true">By Topic</button>
+  <button type="button" class="publication-toggle" data-publication-view="time" aria-controls="publications-time" aria-pressed="false" disabled="disabled">By Time</button>
+</div>
+<div id="publications-topic" class="publication-view">
+<h3>LLM Alignment and Trustworthiness</h3>
 <ol>
 <li><p>Wasserstein Distributionally Robust Regret Optimization for Reinforcement Learning from Human Feedback <br />
-<i>by</i> Yikai Wang*, <b>Shang Liu*</b>, Jose Blanchet, [<a href="https://arxiv.org/abs/2605.00155/" target=&ldquo;blank&rdquo;>arXiv</a>].
+<i>by</i> Yikai Wang*, <b>Shang Liu*</b>, Jose Blanchet, [<a href="https://arxiv.org/abs/2605.00155/" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> When RLHF only observes a proxy reward, minimizing worst-case regret mitigates reward over-optimization without becoming either over-optimistic or over-pessimistic.
 </p>
 </li>
 <li><p>Incentivizing High-Quality Human Annotations with Golden Questions <br />
-<i>by</i> <b>Shang Liu</b>, Zhongze Cai, Hanzhao Wang, Zhongyao Ma, Xiaocheng Li, [<a href="http://arxiv.org/abs/2505.19134/" target=&ldquo;blank&rdquo;>arXiv</a>].
+<i>by</i> <b>Shang Liu</b>, Zhongze Cai, Hanzhao Wang, Zhongyao Ma, Xiaocheng Li, [<a href="http://arxiv.org/abs/2505.19134/" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> Golden questions can assess annotation quality and incentivize human annotators to exert greater effort.
 </p>
 </li>
 <li><p>How Humans Help LLMs: Assessing and Incentivizing Human Preference Annotators <br />
-<i>by</i> <b>Shang Liu*</b>, Hanzhao Wang*, Zhongyao Ma, Xiaocheng Li, under minor revision at <i>Management Science</i>, [<a href="http://arxiv.org/abs/2502.06387/" target=&ldquo;blank&rdquo;>arXiv</a>].
+<i>by</i> <b>Shang Liu*</b>, Hanzhao Wang*, Zhongyao Ma, Xiaocheng Li, under minor revision at <i>Management Science</i>, [<a href="http://arxiv.org/abs/2502.06387/" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> Fisher information governs the effectiveness of annotator assessment and incentives, while self-consistency monitoring can be cheaper and more informative than expert-based monitoring.
 </p>
 </li>
 <li><p>Reward Modeling with Ordinal Feedback: Wisdom of the Crowd <br />
-<i>by</i> <b>Shang Liu*</b>, Yu Pan*, Guanting Chen, Xiaocheng Li, <i>ICML 2025</i>, [<a href="https://arxiv.org/abs/2411.12843/" target=&ldquo;blank&rdquo;>arXiv</a>].
-</p>
-</li>
-<li><p>Towards Better Understanding of In-Context Learning Ability from In-Context Uncertainty Quantification <br />
-<i>by</i> <b>Shang Liu*</b>, Zhongze Cai*, Guanting Chen, Xiaocheng Li, <i>TMLR</i>, [<a href="https://arxiv.org/abs/2405.15115/" target=&ldquo;blank&rdquo;>arXiv</a>].
+<i>by</i> <b>Shang Liu*</b>, Yu Pan*, Guanting Chen, Xiaocheng Li, <i>ICML 2025</i>, [<a href="https://arxiv.org/abs/2411.12843/" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> Finer-grained ordinal feedback can make reward learning statistically easier, for example by reducing its Rademacher complexity.
 </p>
 </li>
 <li><p>Towards Better Statistical Understanding of Watermarking LLMs <br />
-<i>by</i> Zhongze Cai*, <b>Shang Liu*</b>, Hanzhao Wang*, Huaiyang Zhong, Xiaocheng Li, accepted at <i>Journal of the American Statistical Association</i>, [<a href="https://arxiv.org/abs/2403.13027/" target=&ldquo;blank&rdquo;>arXiv</a>].
-</p>
-</li>
-<li><p>When No-Rejection Learning is Consistent for Regression with Rejection <br />
-<i>by</i> Xiaocheng Li, <b>Shang Liu</b>, Chunlin Sun, Hanzhao Wang, <i>AISTATS 2024</i>, [<a href="https://arxiv.org/abs/2307.02932/" target=&ldquo;blank&rdquo;>arXiv</a>].
-</p>
-</li>
-<li><p>Understanding Uncertainty Sampling <br />
-<i>by</i> <b>Shang Liu</b>, Xiaocheng Li, [<a href="https://arxiv.org/abs/2307.02719" target=&ldquo;blank&rdquo;>arXiv</a>].
-</p>
-</li>
-<li><p>Distribution-Free Model-Agnostic Regression Calibration via Nonparametric Methods <br />
-<i>by</i> <b>Shang Liu*</b>, Zhongze Cai*, Xiaocheng Li, <i>NeurIPS 2023</i>, [<a href="https://arxiv.org/abs/2305.12283/" target=&ldquo;blank&rdquo;>arXiv</a>].
-</p>
-</li>
-<li><p>Maximum Optimality Margin: A Unified Approach for Contextual Linear Programming and Inverse Linear Programming <br />
-<i>by</i> Chunlin Sun*, <b>Shang Liu*</b>, Xiaocheng Li, <i>ICML 2023</i>, [<a href="https://arxiv.org/abs/2301.11260/" target=&ldquo;blank&rdquo;>arXiv</a>].
-</p>
-</li>
-<li><p>Non-stationary Bandits with Knapsacks <br />
-<i>by</i> <b>Shang Liu</b>, Jiashuo Jiang, Xiaocheng Li, <i>NeurIPS 2022</i>, [<a href="https://arxiv.org/abs/2205.12427/" target=&ldquo;blank&rdquo;>arXiv</a>].
-</p>
-</li>
-<li><p>Online Bin Packing with Known <i>T</i> <br />
-<i>by</i> <b>Shang Liu</b>, Xiaocheng Li, under major revision at <i>Mathematics of Operations Research</i>, [<a href="https://arxiv.org/abs/2112.03200" target=&ldquo;blank&rdquo;>arXiv</a>].
+<i>by</i> Zhongze Cai*, <b>Shang Liu*</b>, Hanzhao Wang*, Huaiyang Zhong, Xiaocheng Li, accepted at <i>Journal of the American Statistical Association</i>, [<a href="https://arxiv.org/abs/2403.13027/" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> Model distortion is an unavoidable price of watermarking, and the optimal design lies on the Pareto frontier between distortion and detectability.
 </p>
 </li>
 </ol>
+<h3>Uncertainty in Machine Learning</h3>
+<ol>
+<li><p>Towards Better Understanding of In-Context Learning Ability from In-Context Uncertainty Quantification <br />
+<i>by</i> <b>Shang Liu*</b>, Zhongze Cai*, Guanting Chen, Xiaocheng Li, <i>TMLR</i>, [<a href="https://arxiv.org/abs/2405.15115/" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> Transformers can learn to perform in-context uncertainty quantification, revealing how their mean and uncertainty predictions behave under distribution shifts.
+</p>
+</li>
+<li><p>When No-Rejection Learning is Consistent for Regression with Rejection <br />
+<i>by</i> Xiaocheng Li, <b>Shang Liu</b>, Chunlin Sun, Hanzhao Wang, <i>AISTATS 2024</i>, [<a href="https://arxiv.org/abs/2307.02932/" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> Regression with rejection depends on both prediction risk and calibration risk.
+</p>
+</li>
+<li><p>Understanding Uncertainty Sampling via Equivalent Loss <br />
+<i>by</i> <b>Shang Liu</b>, Xiaocheng Li, [<a href="https://arxiv.org/abs/2307.02719" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> Uncertainty sampling implicitly optimizes an equivalent loss rather than the original loss, potentially changing convexity, Lipschitzness, and surrogate properties.
+</p>
+</li>
+<li><p>Distribution-Free Model-Agnostic Regression Calibration via Nonparametric Methods <br />
+<i>by</i> <b>Shang Liu*</b>, Zhongze Cai*, Xiaocheng Li, <i>NeurIPS 2023</i>, [<a href="https://arxiv.org/abs/2305.12283/" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> The smoothness of the conditional quantile function, captured by its Lipschitz constant, reveals the intrinsic difficulty of individual regression calibration.
+</p>
+</li>
+</ol>
+<h3>Linear Programming and Data-Driven Decision-Making</h3>
+<ol>
+<li><p>Maximum Optimality Margin: A Unified Approach for Contextual Linear Programming and Inverse Linear Programming <br />
+<i>by</i> Chunlin Sun*, <b>Shang Liu*</b>, Xiaocheng Li, <i>ICML 2023</i>, [<a href="https://arxiv.org/abs/2301.11260/" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> For inverse LPs, the reduced-cost optimality conditions of observed solutions can be turned into an SVM-like maximum-margin learning problem.
+</p>
+</li>
+<li><p>Non-stationary Bandits with Knapsacks <br />
+<i>by</i> <b>Shang Liu</b>, Jiashuo Jiang, Xiaocheng Li, <i>NeurIPS 2022</i>, [<a href="https://arxiv.org/abs/2205.12427/" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> Global resource constraints require global, rather than only local, measures of non-stationarity.
+</p>
+</li>
+<li><p>Online Bin Packing with Known <i>T</i> <br />
+<i>by</i> <b>Shang Liu</b>, Xiaocheng Li, under major revision at <i>Mathematics of Operations Research</i>, [<a href="https://arxiv.org/abs/2112.03200" target=&ldquo;blank&rdquo;>arXiv</a>]. <br />
+<i>TL;DR:</i> In a doubling-trick algorithm, the number of overflowed items can be represented by the maximum of a zero-endpoint random walk.
+</p>
+</li>
+</ol>
+</div>
+<div id="publications-time" class="publication-view" hidden="hidden">
+  <p class="publication-order-note"><i>reverse chronological order</i></p>
+  <ol id="publications-chronological-list"></ol>
+</div>
 </td>
 </tr>
 </table>

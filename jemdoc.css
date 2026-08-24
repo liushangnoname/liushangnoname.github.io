@@ -368,3 +368,110 @@ table.imgtable, table.imgtable td {
 	border: none;
 	text-align: left;
 }
+
+/* Publication views. */
+.publication-switcher {
+	display: inline-flex;
+	margin: 0.25em 0 0.7em;
+	border: 1px solid #527bbd;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.publication-toggle {
+	border: 0;
+	border-right: 1px solid #527bbd;
+	padding: 0.4em 0.85em;
+	background: white;
+	color: #224b8d;
+	font-family: Georgia, serif;
+	font-size: 0.95em;
+	cursor: pointer;
+}
+
+.publication-toggle:last-child {
+	border-right: 0;
+}
+
+.publication-toggle:hover,
+.publication-toggle:focus-visible {
+	background: #eef3fa;
+}
+
+.publication-toggle.active {
+	background: #527bbd;
+	color: white;
+}
+
+.publication-view[hidden] {
+	display: none;
+}
+
+.publication-view h3 {
+	margin-top: 0.9em;
+}
+
+.publication-view ol {
+	margin-bottom: 1.25em;
+}
+
+.publication-view li p {
+	margin-bottom: 0.7em;
+}
+
+.paper-tldr {
+	display: block;
+	margin-top: 0.15em;
+	color: #687584;
+	font-size: 90%;
+	line-height: 1.35;
+}
+
+.paper-tldr i {
+	color: #536273;
+}
+
+@media (max-width: 600px) {
+	table#tlayout,
+	table#tlayout > tbody,
+	table#tlayout > tbody > tr,
+	table#tlayout > tbody > tr > td {
+		display: block;
+		width: auto;
+	}
+
+	#layout-menu {
+		display: none;
+	}
+
+	#layout-content {
+		padding: 0 0.85em;
+	}
+
+	table.imgtable,
+	table.imgtable > tbody,
+	table.imgtable > tbody > tr,
+	table.imgtable > tbody > tr > td {
+		display: block;
+		width: auto;
+	}
+
+	table.imgtable td {
+		padding: 0;
+	}
+
+	table.imgtable img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.publication-switcher {
+		display: flex;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.publication-toggle {
+		flex: 1;
+	}
+}
