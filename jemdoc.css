@@ -419,12 +419,39 @@ table.imgtable, table.imgtable td {
 	margin-bottom: 0.7em;
 }
 
+.paper-tldr-toggle {
+	margin-left: 0.45em;
+	padding: 0.12em 0.45em;
+	border: 1px solid #b9c7d9;
+	border-radius: 3px;
+	background: #f7f9fc;
+	color: #536b88;
+	font-family: Georgia, serif;
+	font-size: 82%;
+	line-height: 1.25;
+	cursor: pointer;
+	vertical-align: baseline;
+	touch-action: manipulation;
+}
+
+.paper-tldr-toggle:hover,
+.paper-tldr-toggle:focus-visible,
+.paper-tldr-toggle[aria-expanded="true"] {
+	border-color: #8fa6c3;
+	background: #eaf0f8;
+	color: #224b8d;
+}
+
 .paper-tldr {
 	display: block;
-	margin-top: 0.15em;
+	margin-top: 0.3em;
 	color: #687584;
 	font-size: 90%;
 	line-height: 1.35;
+}
+
+.paper-tldr[hidden] {
+	display: none;
 }
 
 .paper-tldr i {
@@ -473,5 +500,10 @@ table.imgtable, table.imgtable td {
 
 	.publication-toggle {
 		flex: 1;
+	}
+
+	.paper-tldr-toggle {
+		padding: 0.18em 0.5em;
+		font-size: 88%;
 	}
 }
