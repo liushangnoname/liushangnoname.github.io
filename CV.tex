@@ -1,0 +1,208 @@
+% Shang Liu's academic CV.
+% Build from the repository root with:
+%   latexmk -pdf -interaction=nonstopmode -halt-on-error CV.tex
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[left=0.25in,right=0.25in,top=0.48in,bottom=0.42in]{geometry}
+
+\definecolor{ruleblue}{HTML}{1B7F9D}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  pdftitle={Shang Liu - Curriculum Vitae},
+  pdfauthor={Shang Liu}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\newcommand{\me}{\textbf{Shang Liu}}
+\newcommand{\equalcontrib}{\textsuperscript{*}}
+\newcommand{\venue}[1]{\textbf{\textit{#1}}}
+\newcommand{\cvsection}[1]{%
+  \vspace{8pt}%
+  {\color{ruleblue}\hrule height 0.8pt}%
+  \vspace{2pt}%
+  {\fontsize{15}{17}\selectfont\bfseries\itshape #1}\par
+  \vspace{3pt}%
+}
+
+\newenvironment{educationlist}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{0.38in}%
+    \setlength{\rightmargin}{0.12in}%
+    \setlength{\itemsep}{8pt}%
+    \setlength{\topsep}{0pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+  }%
+}{\end{list}}
+
+\newenvironment{publicationlist}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{0.31in}%
+    \setlength{\rightmargin}{0.13in}%
+    \setlength{\itemsep}{8pt}%
+    \setlength{\topsep}{0pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\publication}[3]{%
+  \item[]\textbf{#1}\par
+  #2, #3\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{22}{25}\selectfont\bfseries Shang Liu}\par
+  \vspace{10pt}
+  {\fontsize{13}{16}\selectfont Imperial College London}\par
+  {\fontsize{13}{16}\selectfont South Kensington Campus, London SW7 2AZ, United Kingdom}\par
+  \vspace{3pt}
+  {\fontsize{13}{16}\selectfont Email: \href{mailto:s.liu21@imperial.ac.uk}{s.liu21@imperial.ac.uk}}\par
+  \vspace{2pt}
+  {\fontsize{11}{14}\selectfont
+    Website: \href{https://liushangnoname.github.io/}{liushangnoname.github.io}
+    \quad\textbar\quad
+    \href{https://scholar.google.co.uk/citations?user=gnnxAZoAAAAJ}{Google Scholar}}\par
+\end{center}
+
+\vspace{-2pt}
+\cvsection{EDUCATION}
+
+\begin{educationlist}
+  \item[]
+  \textbf{Visiting Ph.D. in Management Science and Engineering}\par
+  Department of Management Science and Engineering, Stanford University, Stanford, CA\par
+  \textit{Oct. 2025 -- Jun. 2026}\par
+  Host: Prof. Jose Blanchet
+
+  \item[]
+  \textbf{Ph.D. in Operations and Analytics}\par
+  Business School, Imperial College London (ICL), London, UK\par
+  \textit{Sept. 2022 -- Jun. 2027 (Expected)}\par
+  Advisors: Prof. Xiaocheng Li and Prof. Kalyan Talluri
+
+  \item[]
+  \textbf{M.Res. in Operations and Analytics (Distinction)}\par
+  Business School, Imperial College London (ICL), London, UK\par
+  \textit{Sept. 2021 -- Jun. 2022}
+
+  \item[]
+  \textbf{B.S. in Mathematics and Applied Mathematics}\par
+  School of Mathematical Sciences, Peking University (PKU), Beijing, China\par
+  \textit{Sept. 2016 -- Jun. 2021}
+\end{educationlist}
+
+\cvsection{RESEARCH INTERESTS}
+
+\begin{list}{}{\setlength{\leftmargin}{0.34in}\setlength{\rightmargin}{0.15in}\setlength{\topsep}{0pt}}
+  \item[] My research focuses on enhancing the alignment, robustness, and ethical deployment of large
+  language models (LLMs) through interdisciplinary frameworks of human-AI collaboration, game
+  theory, statistical learning, and optimization. I aim to develop both theoretically guaranteed
+  (e.g., convergence analyses, complexity bounds) and empirically valid methodologies. My
+  research interests also lie in the development and theoretical analysis of machine learning
+  models, with a particular focus on the role of uncertainty, including uncertainty quantification,
+  active learning, and human-AI interaction.
+\end{list}
+
+\cvsection{PUBLICATIONS}
+
+\hspace{0.30in}{\small (reverse chronological order; *: equal contribution)}\par
+\vspace{3pt}
+\begin{publicationlist}
+  \publication
+    {Wasserstein Distributionally Robust Regret Optimization for Reinforcement Learning from Human Feedback}
+    {Yikai Wang\equalcontrib, \me\equalcontrib, Jose Blanchet}
+    {\href{https://arxiv.org/abs/2605.00155/}{arXiv}}
+
+  \publication
+    {Incentivizing High-Quality Human Annotations with Golden Questions}
+    {\me, Zhongze Cai, Hanzhao Wang, Zhongyao Ma, Xiaocheng Li}
+    {\href{https://arxiv.org/abs/2505.19134/}{arXiv}}
+
+  \publication
+    {How Humans Help LLMs: Assessing and Incentivizing Human Preference Annotators}
+    {\me\equalcontrib, Hanzhao Wang\equalcontrib, Zhongyao Ma, Xiaocheng Li}
+    {\textit{under Minor Revision at }\venue{Management Science}, \href{https://arxiv.org/abs/2502.06387/}{arXiv}}
+
+  \publication
+    {Reward Modeling with Ordinal Feedback: Wisdom of the Crowd}
+    {\me\equalcontrib, Yu Pan\equalcontrib, Guanting Chen, Xiaocheng Li}
+    {\venue{ICML 2025}, \href{https://arxiv.org/abs/2411.12843/}{arXiv}}
+\end{publicationlist}
+
+\newpage
+
+\begin{publicationlist}
+  \publication
+    {Towards Better Understanding of In-Context Learning Ability from In-Context Uncertainty Quantification}
+    {\me\equalcontrib, Zhongze Cai\equalcontrib, Guanting Chen, Xiaocheng Li}
+    {\venue{Transactions on Machine Learning Research 2025}, \href{https://arxiv.org/abs/2405.15115/}{arXiv}}
+
+  \publication
+    {Towards Better Statistical Understanding of Watermarking LLMs}
+    {Zhongze Cai\equalcontrib, \me\equalcontrib, Hanzhao Wang\equalcontrib, Huaiyang Zhong, Xiaocheng Li}
+    {\venue{Journal of the American Statistical Association 2026}, \href{https://arxiv.org/abs/2403.13027/}{arXiv}}
+
+  \publication
+    {When No-Rejection Learning is Consistent for Regression with Rejection}
+    {Xiaocheng Li, \me, Chunlin Sun, Hanzhao Wang}
+    {\venue{AISTATS 2024}, \href{https://arxiv.org/abs/2307.02932/}{arXiv}}
+
+  \publication
+    {Understanding Uncertainty Sampling via Equivalent Loss}
+    {\me, Xiaocheng Li}
+    {\href{https://arxiv.org/abs/2307.02719/}{arXiv}}
+
+  \publication
+    {Distribution-Free Model-Agnostic Regression Calibration via Nonparametric Methods}
+    {\me\equalcontrib, Zhongze Cai\equalcontrib, Xiaocheng Li}
+    {\venue{NeurIPS 2023}, \href{https://arxiv.org/abs/2305.12283/}{arXiv}}
+
+  \publication
+    {Maximum Optimality Margin: A Unified Approach for Contextual Linear Programming and Inverse Linear Programming}
+    {Chunlin Sun\equalcontrib, \me\equalcontrib, Xiaocheng Li}
+    {\venue{ICML 2023}, \href{https://arxiv.org/abs/2301.11260/}{arXiv}}
+
+  \publication
+    {Non-stationary Bandits with Knapsacks}
+    {\me, Jiashuo Jiang, Xiaocheng Li}
+    {\venue{NeurIPS 2022}, \href{https://arxiv.org/abs/2205.12427/}{arXiv}}
+
+  \publication
+    {Online Bin Packing with Known $T$}
+    {\me, Xiaocheng Li}
+    {\textit{under Major Revision at }\venue{Mathematics of Operations Research}, \href{https://arxiv.org/abs/2112.03200/}{arXiv}}
+\end{publicationlist}
+
+\cvsection{PRIZES \& AWARDS}
+
+\begin{list}{}{\setlength{\leftmargin}{0.40in}\setlength{\rightmargin}{0.15in}\setlength{\topsep}{0pt}\setlength{\itemsep}{1pt}}
+  \item[] Dean's List for Academic Excellence at Imperial College Business School, 2021/2022
+  \item[] Outstanding Graduate of Peking University, 2021
+  \item[] \textit{Wusi} Scholarships at Peking University, 2016/2017, 2017/2018
+\end{list}
+
+\cvsection{SERVICE}
+
+\hspace{0.40in}Reviewer: NeurIPS, ICLR, AISTATS, ICML, AAAI, TMLR, INFORMS IJDS
+
+\cvsection{TEACHING}
+
+\begin{list}{}{\setlength{\leftmargin}{0.40in}\setlength{\rightmargin}{0.15in}\setlength{\topsep}{0pt}\setlength{\itemsep}{1pt}}
+  \item[] Teaching Assistant:
+  \item[] Machine Learning, Imperial College London, Spring 2024/2025/2026
+  \item[] Generative AI and Large Language Models, Imperial College London, Spring 2025/2026
+\end{list}
+
+\end{document}
