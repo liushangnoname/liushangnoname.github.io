@@ -15,7 +15,7 @@ Previously, I visited the [https://msande.stanford.edu/ Department of Management
 I received my M.Res. degree from Imperial College Business School in 2022.
 Before joining Imperial College, I received my B.Sc. degree from [https://www.math.pku.edu.cn/ School of Mathematical Sciences] at Peking University in 2021.\n
 For those who are interested, my Chinese name is 刘(Liu)上(Shang).\n
-*I am on the academic job market of 2026.*\n
+*I am on the 2026–27 academic job market.*\n
 Here is my [CV.pdf CV].
 
 == Research
@@ -48,12 +48,12 @@ Within these broad areas, I am interested in theoretically grounded methodologic
 /by/ *Shang Liu\**, Yu Pan\*, Guanting Chen, Xiaocheng Li, /ICML 2025/, \[[https://arxiv.org/abs/2411.12843/ arXiv]\]. \n
 /TL;DR:/ Finer-grained ordinal feedback can make reward learning statistically easier, for example by reducing its Rademacher complexity.
 . Towards Better Statistical Understanding of Watermarking LLMs \n
-/by/ Zhongze Cai\*, *Shang Liu\**, Hanzhao Wang\*, Huaiyang Zhong, Xiaocheng Li, accepted at /Journal of the American Statistical Association/, \[[https://arxiv.org/abs/2403.13027/ arXiv]\]. \n
+/by/ Zhongze Cai\*, *Shang Liu\**, Hanzhao Wang\*, Huaiyang Zhong, Xiaocheng Li, /Journal of the American Statistical Association 2026/, \[[https://arxiv.org/abs/2403.13027/ arXiv]\]. \n
 /TL;DR:/ Model distortion is an unavoidable price of watermarking, and the optimal design lies on the Pareto frontier between distortion and detectability.
 
 === Uncertainty in Machine Learning
 . Towards Better Understanding of In-Context Learning Ability from In-Context Uncertainty Quantification \n
-/by/ *Shang Liu\**, Zhongze Cai\*, Guanting Chen, Xiaocheng Li, /TMLR/, \[[https://arxiv.org/abs/2405.15115/ arXiv]\]. \n
+/by/ *Shang Liu\**, Zhongze Cai\*, Guanting Chen, Xiaocheng Li, /Transactions on Machine Learning Research 2025/, \[[https://arxiv.org/abs/2405.15115/ arXiv]\]. \n
 /TL;DR:/ Transformers can learn to perform in-context uncertainty quantification, revealing how their mean and uncertainty predictions behave under distribution shifts.
 . When No-Rejection Learning is Consistent for Regression with Rejection \n
 /by/ Xiaocheng Li, *Shang Liu*, Chunlin Sun, Hanzhao Wang, /AISTATS 2024/, \[[https://arxiv.org/abs/2307.02932/ arXiv]\]. \n
