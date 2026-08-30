@@ -378,6 +378,12 @@ table.imgtable, table.imgtable td {
 	overflow: hidden;
 }
 
+.publication-contribution-note {
+	margin: -0.25em 0 0.7em;
+	color: #555;
+	font-size: 0.93em;
+}
+
 .publication-toggle {
 	border: 0;
 	border-right: 1px solid #527bbd;
