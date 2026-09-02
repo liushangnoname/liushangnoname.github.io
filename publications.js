@@ -5,11 +5,17 @@
     var chronologicalList = document.getElementById('publications-chronological-list');
     var topicPapers = document.querySelectorAll('#publications-topic ol > li');
 
-    function arxivSequence(paper) {
+    function publicationSequence(paper) {
       var arxivLink = paper.querySelector('a[href*="arxiv.org/abs/"]');
       var match = arxivLink && arxivLink.href.match(/\/abs\/(\d+\.\d+)/);
+      var publicationDate = paper.querySelector('[data-publication-date]');
+      var dateMatch = publicationDate && publicationDate.getAttribute('data-publication-date').match(/^20(\d{2})-(\d{2})-(\d{2})$/);
 
-      return match ? parseInt(match[1].replace('.', ''), 10) : 0;
+      if (match) {
+        return parseInt(match[1].replace('.', ''), 10);
+      }
+
+      return dateMatch ? parseInt(dateMatch[1] + dateMatch[2] + dateMatch[3] + '000', 10) : 0;
     }
 
     function prepareTldr(paper, paperIndex) {
@@ -68,7 +74,7 @@
 
     var chronologicalPapers = Array.prototype.slice.call(topicPapers);
     chronologicalPapers.sort(function (paperA, paperB) {
-      return arxivSequence(paperB) - arxivSequence(paperA);
+      return publicationSequence(paperB) - publicationSequence(paperA);
     });
 
     for (var paperIndex = 0; paperIndex < chronologicalPapers.length; paperIndex += 1) {

@@ -35,6 +35,11 @@ Within these broad areas, I am interested in theoretically grounded methodologic
 <div id="publications-topic" class="publication-view">
 ~~~
 
+=== Working Papers
+. The Critic Is Only a Proxy: Regret Optimization for Reinforcement Learning \n
+/by/ Yikai Wang\*, *Shang Liu\**, Guanting Chen, Jose Blanchet, working paper, draft available upon request. {{<span data-publication-date="2026-09-02" hidden></span>}} \n
+/TL;DR:/ The critic is only a proxy, and we should be careful about how we treat the signal it sends to the actor.
+
 === LLM Alignment and Trustworthiness
 . Wasserstein Distributionally Robust Regret Optimization for Reinforcement Learning from Human Feedback \n
 /by/ Yikai Wang\*, *Shang Liu\**, Jose Blanchet, \[[https://arxiv.org/abs/2605.00155/ arXiv]\]. \n
