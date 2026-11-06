@@ -37,7 +37,7 @@ Within these broad areas, I am interested in theoretically grounded methodologic
 
 === Working Papers
 . The Critic Is Only a Proxy: Regret Optimization for Reinforcement Learning \n
-*Shang Liu\**, Yikai Wang\*, Guanting Chen, Jose Blanchet, working paper, draft available upon request. {{<span data-publication-date="2026-09-02" hidden></span>}} \n
+*Shang Liu\**, Yikai Wang\*, Guanting Chen, Jose Blanchet, working paper, draft available at [https://openreview.net/forum?id=gJFBMqK6U2 OpenReview]. {{<span data-publication-date="2026-09-02" hidden></span>}} \n
 /TL;DR:/ The critic is only a proxy, and we should be careful about how we treat the signal it sends to the actor.
 
 === LLM Alignment and Trustworthiness
@@ -65,7 +65,7 @@ Zhongze Cai\*, *Shang Liu\**, Hanzhao Wang\*, Huaiyang Zhong, Xiaocheng Li, /Jou
 Xiaocheng Li, *Shang Liu*, Chunlin Sun, Hanzhao Wang, /AISTATS 2024/, \[[https://arxiv.org/abs/2307.02932/ arXiv]\]. \n
 /TL;DR:/ Regression with rejection depends on both prediction risk and calibration risk.
 . Understanding Uncertainty Sampling via Equivalent Loss \n
-*Shang Liu*, Xiaocheng Li, \[[https://arxiv.org/abs/2307.02719 arXiv]\]. \n
+*Shang Liu*, Xiaocheng Li, reject and resubmit at /Journal of Machine Learning Research/, \[[https://arxiv.org/abs/2307.02719 arXiv]\]. \n
 /TL;DR:/ Uncertainty sampling implicitly optimizes an equivalent loss rather than the original loss, potentially changing convexity, Lipschitzness, and surrogate properties.
 . Distribution-Free Model-Agnostic Regression Calibration via Nonparametric Methods \n
 *Shang Liu\**, Zhongze Cai\*, Xiaocheng Li, /NeurIPS 2023/, \[[https://arxiv.org/abs/2305.12283/ arXiv]\]. \n
